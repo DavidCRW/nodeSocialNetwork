@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="/css/all.css" rel="stylesheet">
+    <title>Node Social Website - Bejelentkezés</title>
+</head>
+<body class="loginBody">
+
+
+    <nav class="navbar navbar-expand-lg navBGColor">
+        <div class="container-fluid navBGColor">
+            <div class="navbar col-12 loginNavbar">
+                <h2 class="loginTitleOnMobile"><i class="fa-solid fa-user-group me-2" style="color: white"></i>Social Website</h2>              
+                <nav class="navbar navbar-light bg-light" style="padding: 0; border-radius: 4px;">
+                    <form class="loginForm container-fluid" style="padding: 0; background-color: #242526;">
+                      <div class="input-group">
+                        <input type="email" id="loginEmail" class="form-control me-3 loginForm" placeholder="Felhasználónév" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="password" id="loginPassword" class="form-control loginForm" placeholder="Jelszó" aria-label="Password" aria-describedby="basic-addon2">
+                        <button type="submit" class="btn btn-success">Belépés</button>
+                      </div>
+                    </form>
+                </nav>
+            </div>          
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row d-flex align-items-center justify-content-center">
+        <img src="img/loginPagePhoto.png" alt="" class="loginPagePhoto col-xl-6">
+        <form class="register col-12 col-xl-6 ms-xl-5" style="max-width: 600px;">
+            <h2 class="registerTitle">Regisztráció</h2>
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email cím</label>
+              <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Soha ne oszd meg az email címed másokkal!</div>
+            </div>
+            <div class="mb-3">
+                <label for="registerName" class="form-label">Név</label>
+                <input type="text" class="form-control" id="registerName">
+            </div>
+            <div class="mb-3">
+                <label for="registerBirthDate" class="form-label">Születési idő</label>
+                <input type="date" class="form-control" id="registerBirthDate">
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Jelszó</label>
+              <input type="password" class="form-control" id="registerPassword">
+            </div>
+            <button type="submit" class="btn btn-success">Regisztráció</button>
+          </form>
+        </div>
+    </div>
+
+<script src="script/loginScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Main settings */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #18191a;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
+.loginBody{
+    overflow: hidden;
+}
+img{
+    width: 100%;
+}
+
+
+/* ------------------ INDEX PAGE ------------------ */
+
+/* Navbar */
+.navBGColor{
+    background-color: #242526;
+}
+.navColor{
+    color: #8d8f93;
+}
+.navbar{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.navbar-brand{
+    transition-duration: 0.3s;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.navbar-brand:hover{
+    background-color: #323335;
+}
+.hamburger:hover{
+    background-color: #323335;
+}
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.3s;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.line{
+    background-color: #8d8f93;
+    height: 3px;
+    width: 25px;
+    margin: 3px auto;
+}
+.chat{
+    right: 50px;
+    position: absolute;
+    background-color: #323335;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+}
+.chatBox{
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.chatBox:hover{
+    background-color: #444649;
+    border-radius: 4px;
+}
+.notifications{
+    right: 0px;
+    position: absolute;
+    background-color: #323335;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+}
+.dshow{
+    display: block;
+}
+@media(max-width: 550px){
+    .chat{
+        right: 0px;
+    }
+}
+
+/* LeftSide NavBar */
+.contentArea{
+    margin-top: 1rem;
+}
+.leftSideNavBar{
+    padding: 0;
+    align-items: center;
+}
+.leftSideNavBar li{
+    list-style: none;
+    transition-duration: 0.2s;
+}
+.leftSideNavBar a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: block;
+    padding: 1rem 1rem;
+}
+.navIcon{
+    color: #0b86ee;
+    width: 30px;
+    margin-right: 0.5rem;
+    text-align: center;
+}
+.leftSideNavBar li:hover{
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media(max-width:1197px){
+    .searchField{
+        max-width: 135px;
+    }
+}
+@media(max-width:550px){
+    .searchField{
+        max-width: 600px;
+    }
+    .titleOnMobile{
+        display: block;
+        margin: 0.5rem auto;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
+@media(min-width:551px){
+    .titleOnMobile{
+        display: none;
+    }
+}
+
+/* RightSide Navbar */
+.rightSideText{
+    color: #b0b3b8;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.birthdaysToday{
+    margin: 0.5rem 0rem;
+    font-size: 1.1rem;
+}
+.hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid #363638;;
+}
+
+/* Middle Content */
+.cardBody{
+    max-width: 100px;
+    max-height: 160px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    margin: 0 0.3rem;
+    cursor: pointer;
+}
+.cardImg{
+    max-width: 100px;
+    max-height: 160px;
+    position: absolute;
+    border-radius: 10px;
+}
+.cardStoryTitle{
+    position: relative;
+    top:110px;
+    left: 5px;
+    font-weight: 600
+}
+.firstCard{
+    top: 100px;
+    left:0;
+    background-color: #242526;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+@media(max-width: 450px){
+    .lastCard{
+        display: none;
+    }
+}
+@media(max-width: 1095px){
+    .lg-card{
+        display: none;
+    }
+}
+
+.posts{
+    margin: 0 0.1rem;
+}
+.postProfilePicture{
+    max-width: 40px;
+    border-radius: 50px;
+    margin: 0.5rem;
+}
+.postData{
+    display: flex;
+}
+.authorAndDate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.postPhoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: black;
+}
+.postPhoto img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    width: auto;
+}
+
+
+.postBtn{
+    margin: 0 0.2rem;
+}
+
+@media(max-width: 435px){
+    .postBtn{
+        margin: 0 0rem;
+        font-size: 0.7rem;
+    }
+}
+
+
+
+/* ------------------ LOGIN PAGE ------------------ */
+
+.loginTitleOnMobile{
+    display: flex;
+    margin: 0.7rem 0.5rem 0.7rem 0rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.loginNavbar{
+    justify-content: space-between;
+}
+.loginContainer .register{
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+.loginForm{
+    border-radius:4px;
+    background-color: #3a3b3c;
+    color: white;
+    border: 0;
+}
+
+@media(max-width: 850px){
+    .loginNavbar{
+        justify-content: center;
+    }
+}
+@media(max-width: 1099px){
+    .loginContainer h1{
+        display: none;
+    }
+}
+@media(max-width: 1400px){
+    .loginContainer h1{
+        left: 80%;
+    }
+}
+@media(max-width: 1295px){
+    .loginPagePhoto{
+        display: none;
+    }
+    .registerTitle{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+@media(min-width: 1296px){
+    .loginPagePhoto{
+        display: block;
+    }
+    .registerTitle{
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ------------------ PROFILE PAGE ------------------ */
+.profileContainer{
+    display: flex;
+}
+.profileNav{
+    transition-duration: 0.2s;
+}
+.profileNav:hover{
+    background-color: #323335;
+    border-radius: 4px;
+}
+.profileNavIcon{
+    width: 30px;
+    margin-right: 0.3rem;
+    text-align: center;
+}

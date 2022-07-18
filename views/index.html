@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="/css/all.css" rel="stylesheet">
+    <title>Node Social Website</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navBGColor">
+        <div class="container-fluid navBGColor">
+            <a href="/home" class="titleOnMobile text-decoration-none fs-2"><i class="fa-solid fa-user-group me-2" style="color: white"></i>Social Website</a>
+            <div class="navbar col-12 justify-content-center">
+                <nav class="col-lg-4 col-xs-12 col-sm-6 col-md-6 navbar navBGColor">
+                    <div class="container-fluid justify-content-start">
+                    <a class="navbar-brand d-none d-md-block" href="#"><i class="fa-solid fa-user-group" style="color: #0b86ee"></i></a>
+                    <form class="d-flex">
+                        <input class="form-control me-2 searchField" type="search" style="background-color: #3a3b3c; color: white; border-color: #3a3b3c; border-radius: 50px;" placeholder="Keresés" aria-label="Search">
+                        <button class="btn btn-outline-success navColor" style="border-color: #8d8f93" type="submit">Keresés</button>
+                      </form>
+                    </div>
+                </nav>
+                <nav class="col-lg-4 col-sm-0 navbar navBGColor d-none d-lg-block">
+                    <div class="container-fluid justify-content-center">
+                    <a class="navbar-brand px-4" href="/home"><i class="fa-solid fa-house navColor"></i></a>
+                    <a class="navbar-brand px-4" href="#"><i class="fa-solid fa-people-group navColor"></i></a>
+                    <a class="navbar-brand px-4" href="#"><i class="fa-solid fa-store navColor"></i></a>
+                    <a class="navbar-brand px-4" href="#"><i class="fa-solid fa-image navColor"></i></a>
+                    </div>
+                </nav>
+                <nav class="col-lg-4 col-xs-12 col-sm-6 col-md-6 navbar navBGColor">
+                    <div class="container-fluid justify-content-end">
+                        <div class="chatMenu">
+                            <i class="fa-solid fa-comment navColor navbar-brand"></i>
+                            <div class="chat">
+                                <span class="fw-bold fs-5">Chatek</span>
+                                <div class="chatBox mt-3 d-flex">
+                                    <div class="profile me-1 d-flex flex-column justify-content-center"><img src="img/basicprofile.jpg" style="max-width: 40px; border-radius: 100px;" alt=""></div>
+                                    <div class="textAndName">
+                                        <div class="name fw-bold">Valami János</div>
+                                        <div class="text" style="max-width: 200px;">Szia mi a helyzet?......................</div>
+                                    </div>
+                                </div>
+                                <div class="chatBox mt-3 d-flex">
+                                    <div class="profile me-1 d-flex flex-column justify-content-center"><img src="img/basicprofile.jpg" style="max-width: 40px; border-radius: 100px;" alt=""></div>
+                                    <div class="textAndName">
+                                        <div class="name fw-bold">Valami Béla</div>
+                                        <div class="text" style="max-width: 200px;">Helló mi?</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notificationMenu">
+                            <i class="fa-solid fa-bell navColor navbar-brand"></i>
+                            <div class="notifications">
+                                <span class="fw-bold fs-5">Értesítések</span>
+                                <div class="chatBox mt-3 d-flex">
+                                    <div class="profile me-1 d-flex flex-column justify-content-center"><img src="img/basicprofile.jpg" style="max-width: 40px; border-radius: 100px;" alt=""></div>
+                                    <div class="textAndName">
+                                        <div class="name fw-bold">Valami János <span class="fw-normal">bejegyzést tett közzé</span></div>
+                                    </div>
+                                </div>
+                                <div class="chatBox mt-3 d-flex">
+                                    <div class="profile me-1 d-flex flex-column justify-content-center"><img src="img/basicprofile.jpg" style="max-width: 40px; border-radius: 100px;" alt=""></div>
+                                    <div class="textAndName">
+                                        <div class="name fw-bold">Valami Béla <span class="fw-normal">bejegyzést tett közzé</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <a class="navbar-brand" href="/profile"><i class="fa-solid fa-user navColor"></i></a>
+                        <div class="dropdown">
+                            <div class="hamburger d-block" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="/home">Kezdőlap</a></li>
+                                <li><a class="dropdown-item" href="/profile">Profil</a></li>
+                                <li><a class="dropdown-item" href="#">Ismerősök</a></li>
+                                <li><a class="dropdown-item" id="logout" href="/">Kijelentkezés</a></li>
+                            </ul>
+                      </div>
+                    </div>
+                </nav>
+            </div>          
+        </div>
+    </nav>
+      
+
+    <div class="container-fluid contentArea">
+        <div class="row">
+            <div class="d-none d-md-block col-md-3 leftSide">
+                <ul class="leftSideNavBar">
+                    <li><a href="/profile"><i class="fa-solid fa-user fa-lg navIcon"></i>Profil</a></li>
+                    <li><a href=""><i class="fa-solid fa-user-group fa-lg navIcon"></i>Ismerősök</a></li>
+                    <li><a href=""><i class="fa-solid fa-people-group fa-lg navIcon"></i>Csoportok</a></li>
+                    <li><a href=""><i class="fa-solid fa-store fa-lg navIcon"></i>Marketplace</a></li>
+                    <li><a href=""><i class="fa-solid fa-clock fa-lg navIcon"></i>Emlékek</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-6 justify-content-center">
+
+                <div class="row cards justify-content-center" style="margin-bottom: 7rem;">
+                    <div class="card col-4 cardBody">
+                        <img src="/img/basicprofile.jpg" class="card-img-top cardImg" style="height: 100px;" alt="...">
+                        <div class="card-title cardStoryTitle firstCard">Történet hozzáadása</div>
+                    </div>
+
+                    <div class="card col-4 cardBody">
+                        <img src="/img/card1.jpg" class="card-img-top cardImg" alt="...">
+                        <div class="card-title cardStoryTitle">Béla</div>
+                    </div>
+
+                    <div class="card col-4 cardBody">
+                        <img src="/img/card1.jpg" class="card-img-top cardImg" alt="...">
+                        <div class="card-title cardStoryTitle">Béla</div>
+                    </div>
+
+                    <div class="card col-4 cardBody lg-card">
+                        <img src="/img/card1.jpg" class="card-img-top cardImg" alt="...">
+                        <div class="card-title cardStoryTitle">Béla</div>
+                    </div>
+
+                    <div class="card lastCard col-4 cardBody d-md-none d-lg-block">
+                        <img src="/img/card1.jpg" class="card-img-top cardImg" alt="...">
+                        <div class="card-title cardStoryTitle">Béla</div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="form-floating text-end" style="max-width: 800px">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="background-color:#3a3b3c; border: 0; color: white;"></textarea>
+                        <label for="floatingTextarea2" style="border-radius: 5px;">Mi jár a fejedben?</label>
+                        <div class="mt-1 mb-1">
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        <button type="submit" class="btn btn-success">Küldés</button>
+                      </div>
+                </div>
+                
+                <div class="row posts justify-content-center mt-3 mb-3">
+                    <div class="post" style="background-color:#242526; max-width: 800px; border-radius: 5px;">
+                        <div class="postData">
+                            <div class="profilePicture"><img src="img/basicprofile.jpg" class="postProfilePicture"></div>
+                            <div class="authorAndDate">
+                                <div class="author" style="font-weight: 600;">Bela</div>
+                                <div class="date text-muted">2021.01.01</div>
+                            </div>
+                        </div>
+                        <div class="postPhoto mb-2">
+                            <img src="img/card1.jpg" alt="">
+                        </div>
+                        <div class="postButtons mb-2">
+                            <button type="buttons" class="btn btn-success postBtn"><i class="fa-solid fa-thumbs-up me-1"></i>Tetszik</button>
+                            <button type="buttons" class="btn btn-success postBtn"><i class="fa-solid fa-comment me-1"></i>Hozzászólok</button>
+                            <button type="buttons" class="btn btn-success postBtn"><i class="fa-solid fa-share me-1"></i>Megosztom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-none d-md-block col-md-3">
+                <span class="rightSideText">Hirdetés</span>
+                <div class="hr"></div>
+                <span class="rightSideText">Születésnapok</span>
+                <div class="birthdaysToday"><i class="fa-solid fa-gift fa-lg navIcon"></i>Béla és további 3 ember ünnepli ma a születésnapját.</div>
+                <div class="hr"></div>
+                <div class="rightSideText">Ismerősök</div>
+                <div class="friendsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/bootstrap.bundle.js"></script>
+    <script src="script/home.js"></script>
+    <script src="script/navbar.js"></script>
+    <script src="script/chatandnotification.js"></script>
+</body>
+</html>
